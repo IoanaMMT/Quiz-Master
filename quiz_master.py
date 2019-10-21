@@ -44,3 +44,12 @@ if question5 == 4:
 	print("Correct! Nice job {}!".format(name))
 else:
 	print("The answer is 4 that you took away.")
+
+#.......QUESTION 6 .........
+question6 = int(raw_input("Who is bigger? 1. Mr Bigger, 2. Mrs. Bigger or 3. Their baby"))
+if question6 == 1:
+	print("The answer is: 'The baby of course. Because he is a little Bigger'.")
+elif question6 == 2:
+	print("The answer is: 'The baby of course. Because he is a little Bigger'.")
+elif question6 == 3:
+	print("Correct! Because he is a little Bigger.")
