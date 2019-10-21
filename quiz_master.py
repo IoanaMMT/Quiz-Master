@@ -37,3 +37,10 @@ if question4.lower() == "Moon": #The lower case is not working
 	print("Great job! You must be really smart.")
 else:
 	print("The correct answer is 'Moon'.")
+
+#.......QUESTION 5 .........
+question5 = int(raw_input("If you have a bowl with 6 apples and you take away four, how many do you have?"))
+if question5 == 4:
+	print("Correct! Nice job {}!".format(name))
+else:
+	print("The answer is 4 that you took away.")
