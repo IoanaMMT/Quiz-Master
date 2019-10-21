@@ -9,7 +9,7 @@ print("Let's go to the first question!")
 #.......QUESTION 1 .........
 question1 = int(raw_input("Question 1: Do you hane any cats? How many?"))
 if question1 == 0:
-	print("That's so sad! :( Cats are really fun loving creatures. You should get one.")
+	print("That's so sad! :( Cats are really fun loving creatures. You should get one.)")
 elif question1 <= 2:
 	print("Good for you {}. I bet you are having a great time together ;).".format(name))
 elif question1 <= 4:
@@ -30,3 +30,10 @@ if question3.lower() == "y":
 	print("Ha! Ha! Did you really stick your tongue out?!")
 elif question3.lower() == "n":
 	print("Well...Try it!")
+
+#.......QUESTION 4 .........
+question4 = raw_input("What is the name of our natural satellite?")
+if question4.lower() == "Moon": #The lower case is not working
+	print("Great job! You must be really smart.")
+else:
+	print("The correct answer is 'Moon'.")
