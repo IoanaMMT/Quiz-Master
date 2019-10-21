@@ -24,4 +24,9 @@ if question2.lower() == "y":
 elif question2.lower() == "n":
 	print("You are a tough cookie {}. You can exit the quiz by wrighting 'QUIT'.".format(name))	
 
-#question3 = raw_input("Question 3: Did you know that your tongue is as long as your thumb?"
+#.......QESTION 3 ...........
+question3 = raw_input("Question 3: Did you know that your tongue is as long as your thumb? y/n")
+if question3.lower() == "y":
+	print("Ha! Ha! Did you really stick your tongue out?!")
+elif question3.lower() == "n":
+	print("Well...Try it!")
