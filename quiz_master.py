@@ -53,3 +53,12 @@ elif question6 == 2:
 	print("The answer is: 'The baby of course. Because he is a little Bigger'.")
 elif question6 == 3:
 	print("Correct! Because he is a little Bigger.")
+
+#.......QUESTION 7 ..........
+question7 = int(raw_input("What is the answer to the next math problem  6/2(1+2) ?"))
+if question7 == 9:
+	print("Excellent!!!")
+elif question7 == 1:
+	print("That's what I thought too, but apparently the answer is 9")
+else:
+	print("Sorry! The right answer is 9.")
