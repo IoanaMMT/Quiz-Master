@@ -8,7 +8,7 @@ print("Let's go to the first question!")
 
 #.......QUESTION 1 .........
 try:
-	question1 = int(raw_input("Question 1: Do you hane any cats? How many?"))
+	question1 = int(raw_input("Question 1: Do you have any cats? How many?"))
 	if question1 == 0:
 		print("That's so sad! :( Cats are really fun loving creatures. You should get one.)")
 	elif question1 <= 2:
@@ -45,11 +45,22 @@ else:
 	print("The correct answer is 'Moon'.")
 
 #.......QUESTION 5 .........
-question5 = int(raw_input("If you have a bowl with 6 apples and you take away four, how many do you have?"))
-if question5 == 4:
-	print("Correct! Nice job {}!".format(name))
-else:
-	print("The answer is 4 that you took away.")
+
+right_answer=False
+attemps = 0
+while right_answer is not True:
+	question5 = int(raw_input("If you have a bowl with 6 apples and you take away four, how many do you have?"))
+	if question5 == 4:
+		print("Correct! Nice job {}!".format(name))
+		right_answer = True
+	else:
+		if attemps <= 3:
+			print("This is not the right answer, try again")
+			attemps += 1
+		else:
+			print("I am sorry, you have no more chances, The answer is 4 that you took away.")
+			break
+
 
 #.......QUESTION 6 .........
 question6 = int(raw_input("Who is bigger? 1. Mr Bigger, 2. Mrs. Bigger or 3. Their baby"))
