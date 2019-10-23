@@ -83,15 +83,23 @@ while right_answer is not True:
 
 
 #.......QUESTION 6 .........
-question6 = int(raw_input("Who is bigger? 1. Mr Bigger, 2. Mrs. Bigger or 3. Their baby"))
-if question6 == 1:
-	print("The answer is: 'The baby of course. Because he is a little Bigger'.")
-elif question6 == 2:
-	print("The answer is: 'The baby of course. Because he is a little Bigger'.")
-elif question6 == 3:
-	print("Correct! Because he is a little Bigger.")
-else:
-	print("Please enter 1, 2 or 3.")
+right_answer = False
+while right_answer is not True:
+	try:
+		question6 = int(raw_input("Who is bigger? 1. Mr Bigger, 2. Mrs. Bigger or 3. Their baby"))
+		if question6 == 1:
+			print("The answer is: 'The baby of course. Because he is a little Bigger'.")
+			right_answer = True
+		elif question6 == 2:
+			print("The answer is: 'The baby of course. Because he is a little Bigger'.")
+			right_answer = True
+		elif question6 == 3:
+			print("Correct! Because he is a little Bigger.")
+			right_answer = True
+		else:
+			print("Please enter 1, 2 or 3.")
+	except ValueError:
+		print("Sorry budy. We need a number. Try 1, 2 or 3.")
 
 #.......QUESTION 7 ..........
 question7 = int(raw_input("What is the answer to the next math problem  6/2(1+2) ?"))
