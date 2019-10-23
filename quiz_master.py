@@ -22,27 +22,47 @@ except ValueError:
 
 
 #.......QUESTION 2 ..........
-question2 = raw_input("Question 2: Are you having fun now? y/n")
-if question2.lower() == "y":
-	print("Excellent! That means you like my quiz! Let's keep playing:)")
-elif question2.lower() == "n":
-	print("You are a tough cookie {}. You can exit the quiz by wrighting 'QUIT'.".format(name))	
-		
+right_answer = False
+while right_answer is not True:
+	question2 = raw_input("Question 2: Are you having fun now? y/n")
+	if question2.lower() == "y":
+		print("Excellent! That means you like my quiz! Let's keep playing:)")
+		right_answer = True
+	elif question2.lower() == "n":
+		print("You are a tough cookie {}. You can exit the quiz by wrighting 'QUIT'.".format(name))	
+		right_answer = True
+	elif question2 != "y" or "n":
+		print("Please answer with y or n")		
 
 
 #.......QESTION 3 ...........
-question3 = raw_input("Question 3: Did you know that your tongue is as long as your thumb? y/n")
-if question3.lower() == "y":
-	print("Ha! Ha! Did you really stick your tongue out?!")
-elif question3.lower() == "n":
-	print("Well...Try it!")
+right_answer = False
+while right_answer is not True:
+	question3 = raw_input("Question 3: Did you know that your tongue is as long as your thumb? y/n")
+	if question3.lower() == "y":
+		print("Ha! Ha! Did you really stick your tongue out?!")
+		right_answer = True
+	elif question3.lower() == "n":
+		print("Well...Try it!")
+		right_answer = True
+	elif question3 != "y" or "n":
+		print("Please answer with y or n")
 
 #.......QUESTION 4 .........
-question4 = raw_input("What is the name of our natural satellite?")
-if question4.lower() == "Moon": #The lower case is not working
-	print("Great job! You must be really smart.")
-else:
-	print("The correct answer is 'Moon'.")
+right_answer = False
+attemps = 0
+while right_answer is not True:
+	question4 = raw_input("What is the name of our natural satellite?")
+	if question4.lower() == "moon": 
+		print("Great job! You must be really smart.")
+		right_answer = True
+	else:
+		if attemps <= 3:
+			print("Sorry. This is not the correct answer. Try again!")
+			attemps += 1
+		else:
+			print("Sorry, you run out of chances. The answer is 'Moon'")
+			break
 
 #.......QUESTION 5 .........
 
