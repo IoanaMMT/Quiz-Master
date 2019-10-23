@@ -112,13 +112,13 @@ while right_answer is not True:
 			right_answer = True
 		elif question7 == 1:
 			print("That's what I thought too, but 1 is not correct. Try again!")
-	        attempts+=1
+			attempts+=1
+		else:
+			if attempts <= 2:
+				print("This is not the right answer. Please try again.")
+				attempts+=1
 			else:
-				if attempts <= 2:
-					print("This is not the right answer. Please try again.")
-					attempts+=1
-				else:
-					print("Sorry. You run out of chances. THe answer is 9.")
+				print("Sorry. You run out of chances. THe answer is 9.")
 	except ValueError:
 		print("The answer is a number. Try again")
 		attempts+=1
