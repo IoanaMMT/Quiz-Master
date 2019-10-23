@@ -50,16 +50,16 @@ while right_answer is not True:
 
 #.......QUESTION 4 .........
 right_answer = False
-attemps = 0
+attempts = 0
 while right_answer is not True:
 	question4 = raw_input("What is the name of our natural satellite?")
 	if question4.lower() == "moon": 
 		print("Great job! You must be really smart.")
 		right_answer = True
 	else:
-		if attemps <= 3:
+		if attempts <= 3:
 			print("Sorry. This is not the correct answer. Try again!")
-			attemps += 1
+			attempts += 1
 		else:
 			print("Sorry, you run out of chances. The answer is 'Moon'")
 			break
@@ -67,16 +67,16 @@ while right_answer is not True:
 #.......QUESTION 5 .........
 
 right_answer=False
-attemps = 0
+attempts = 0
 while right_answer is not True:
 	question5 = int(raw_input("If you have a bowl with 6 apples and you take away four, how many do you have?"))
 	if question5 == 4:
 		print("Correct! Nice job {}!".format(name))
 		right_answer = True
 	else:
-		if attemps <= 3:
+		if attempts <= 3:
 			print("This is not the right answer, try again")
-			attemps += 1
+			attempts += 1
 		else:
 			print("I am sorry, you have no more chances, The answer is 4 that you took away.")
 			break
@@ -102,10 +102,23 @@ while right_answer is not True:
 		print("Sorry budy. We need a number. Try 1, 2 or 3.")
 
 #.......QUESTION 7 ..........
-question7 = int(raw_input("What is the answer to the next math problem  6/2(1+2) ?"))
-if question7 == 9:
-	print("Excellent!!!")
-elif question7 == 1:
-	print("That's what I thought too, but apparently the answer is 9")
-else:
-	print("Sorry! The right answer is 9.")
+right_answer = False
+attempts = 0
+while right_answer is not True:
+	try:
+		question7 = int(raw_input("What is the answer to the next math problem  6/2(1+2) ?"))
+		if question7 == 9:
+			print("Excellent!!!")
+			right_answer = True
+		elif question7 == 1:
+			print("That's what I thought too, but 1 is not correct. Try again!")
+	        attempts+=1
+			else:
+				if attempts <= 2:
+					print("This is not the right answer. Please try again.")
+					attempts+=1
+				else:
+					print("Sorry. You run out of chances. THe answer is 9.")
+	except ValueError:
+		print("The answer is a number. Try again")
+		attempts+=1
