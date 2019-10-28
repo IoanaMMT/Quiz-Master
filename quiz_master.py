@@ -62,7 +62,7 @@ while right_answer is not True:
 right_answer = False
 attempts = 0
 while right_answer is not True:
-	question4 = raw_input("What is the name of our natural satellite?")
+	question4 = raw_input("Question 4: What is the name of our natural satellite?")
 	if question4.lower() == "moon": 
 		print("Great job! You must be really smart.")
 		right_answer = True
@@ -142,11 +142,12 @@ while right_answer is not True:
 #.......SCORE COUNT .........
 if score_count == 1:
 	print("Your score is 1. That's impresive. You probably answer only the cat question correctly.")
-elif score_count <=2:
-	print("Your score is {}. Well, not much, but maybe next time you'll get it right".format(score_count))
-elif score_count >=3:
-	print("Your score is {}. Pretty nice job!".format(score_count))
-elif score_count >=5:
-	print("Very well scored. Your score is {}.".format(score_count))
 elif score_count >6:
 	print("Excellent!!! You've scored a perfect {} !!!".format(score_count))
+elif score_count >=5:
+	print("Very well scored. Your score is {}.".format(score_count))
+elif score_count >=3:
+	print("Your score is {}. Pretty nice job!".format(score_count))
+elif score_count <=2:
+	print("Your score is {}. Well, not much, but maybe next time you'll get it right".format(score_count))
+
